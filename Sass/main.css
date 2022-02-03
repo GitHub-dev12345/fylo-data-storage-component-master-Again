@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Raleway", sans-serif;
+  color: #dddbff;
+  background: url("../images/bg-desktop.png") #0c122c no-repeat;
+  background-size: contain;
+  background-position: center 22.50rem;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0.5rem;
+}
+
+main section {
+  margin: 1rem;
+  padding: 1rem 1rem 0.5rem 2.5rem;
+  background: #1d2c67;
+}
+
+#item-1 {
+  width: 35%;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#item-1 .hidden-logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-left: -0.5rem;
+  border-top-right-radius: 100px;
+}
+
+#item-1 .file-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.1rem 0 1rem;
+  margin-left: -0.5rem;
+}
+
+#item-1 .file-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: 3.1rem;
+  margin: 0.45rem;
+  background: #0c122c;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+#item-1 .file-container a img {
+  width: 100%;
+}
+
+#item-2 {
+  width: 55%;
+  border-radius: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 2.5rem;
+}
+
+#item-2 .dataleft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 11rem;
+  height: 4rem;
+  position: relative;
+  float: right;
+  margin-top: -5rem;
+  padding: 1.9rem 0.5 1.9rem 0.5rem;
+  border: 1px solid black;
+  background: white;
+  border-radius: 10px;
+}
+
+#item-2 .dataleft .span1 {
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 600;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#item-2 .dataleft .span2 {
+  color: #848794;
+  font-weight: 600;
+  font-size: 0.8rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+}
+
+#item-2 .description {
+  color: #dddbff;
+  font-size: 15px;
+}
+
+#item-2 .sliderContainer {
+  width: 100%;
+  padding: 0.15rem;
+  margin: 0.5rem;
+  margin-left: -0.1rem;
+  border-radius: 10px;
+  background: #0c122c;
+  opacity: 0.9;
+}
+
+#item-2 .sliderContainer .datalabel {
+  border-width: 7.5px;
+  border-style: solid;
+  border-color: #ff4d97;
+  border-radius: 10px;
+  width: 75%;
+}
+
+#item-2 .sliderContainer .circle {
+  float: right;
+  width: 10px;
+  margin-top: -0.3rem;
+  margin-right: -0.3rem;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 100%;
+}
+
+#item-2 .data-usage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#item-2 .data-usage h4 {
+  font-size: 12px;
+}
+
+@media all and (max-width: 971px) {
+  body {
+    margin-top: -1rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background-repeat: repeat-y;
+    background-size: cover;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  main section {
+    width: 100%;
+  }
+  #item-1, #item-2 {
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  #item-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #item-1 .hidden-logo {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .dataleft {
+    position: static;
+    clear: right;
+  }
+}
+/*# sourceMappingURL=main.css.map */
