@@ -8,7 +8,7 @@ body{
     font-family: $ft-family;
     color: $ft-color;
     background: url("../images/bg-desktop.png") $bg-color no-repeat;
-    background-size: 100% 62%;
+    background-size: 100% 60%;
     background-position: center 330px;
     width: 100%;
     margin: auto;
@@ -33,7 +33,7 @@ body{
     width: 35%;
     @include border(100px);
 
-    .hidden-logo{
+    h2{
         align-self: flex-start;
         padding: 0.5rem;
         margin-top: 1rem;
@@ -220,7 +220,7 @@ footer{
     body{
         margin-top: -4rem;
         background: url("../images/bg-mobile.png") no-repeat;
-        background-size: 100% 150%;
+        background-size: 100% 200%;
     }
     #item-2{
         margin-top: -0.1rem;
