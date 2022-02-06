@@ -81,10 +81,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -95,13 +95,13 @@ body {
   color: #dddbff;
   background: url("../images/bg-desktop.png") #0c122c no-repeat;
   background-size: contain;
-  background-position: center 22.50rem;
+  background-position: center 21rem;
   width: 100%;
   margin: auto;
   padding: 1rem;
 }
 
-main {
+body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,7 +120,7 @@ main {
   padding: 0.5rem;
 }
 
-main section {
+body main section {
   margin: 1rem;
   padding: 1rem 1rem 0.5rem 2.5rem;
   background: #1d2c67;
@@ -141,6 +141,9 @@ main section {
   margin-top: 1rem;
   margin-left: -0.5rem;
   border-top-right-radius: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 #item-1 .file-container {
@@ -181,6 +184,7 @@ main section {
   background: #0c122c;
   padding: 0.8rem;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 #item-1 .file-container a img {
@@ -211,8 +215,8 @@ main section {
           align-items: center;
   width: 11rem;
   height: 4rem;
-  position: relative;
   float: right;
+  position: relative;
   margin-top: -5rem;
   padding: 1.9rem 0.5 1.9rem 0.5rem;
   border: 1px solid black;
@@ -243,6 +247,7 @@ main section {
 #item-2 .description {
   color: #dddbff;
   font-size: 15px;
+  opacity: 0.8;
 }
 
 #item-2 .sliderContainer {
@@ -294,15 +299,29 @@ main section {
   font-size: 12px;
 }
 
+footer {
+  font-size: 0.8rem;
+  font-weight: 600;
+  word-spacing: 0.5rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: orange;
+  cursor: pointer;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: peachpuff;
+}
+
 @media all and (max-width: 971px) {
   body {
-    margin-top: -1rem;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    background-repeat: repeat-y;
+    margin-top: -2.5rem;
     background-size: cover;
   }
-  main {
+  body main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -319,7 +338,7 @@ main section {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  main section {
+  body main section {
     width: 100%;
   }
   #item-1, #item-2 {
@@ -349,8 +368,54 @@ main section {
         align-self: center;
   }
   .dataleft {
-    position: static;
-    clear: right;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    bottom: -10.80rem;
+  }
+  footer {
+    margin-top: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 462px) {
+  #item-1 {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  #item-1 .hidden-logo {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  footer {
+    text-align: center;
+    line-height: 1.8;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background: url("../images/bg-mobile.png") no-repeat;
+    background-size: cover;
+  }
+  #item-2 {
+    margin-top: -0.1rem;
+  }
+  #item-2 .description {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  .dataleft {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    left: -2.1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,14 @@
+// Mixing Code
+@mixin border($btr){
+    border-top-right-radius: $btr;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+@mixin flexBox($fd, $jc, $ai) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}

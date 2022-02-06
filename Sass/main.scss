@@ -1,135 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-// CSS-Reset
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+@import "_CSSreset"; 
+@import "_variables";
+@import "_mixin";
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-    margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-    list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-    scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-    max-width: 100%;
-    display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-// End Of CSS Reset
-
-// Variables for css Property Rule
-$bg-color : hsl(229, 57%, 11%);
-$card-color : hsl(228, 56%, 26%);
-$ft-color :hsl(243, 100%, 93%);
-$gray-blue : hsl(229, 7%, 55%);
-$ft-family : 'Raleway', sans-serif;
-
-
-@mixin flexBox($fd, $jc, $ai) {
-    display: flex;
-    flex-direction: $fd;
-    justify-content: $jc;
-    align-items: $ai;
-}
-
+// Body Design Code
 body{
-    @include  flexBox(row, center ,center);
+    @include  flexBox(column, center ,center);
     font-family: $ft-family;
     color: $ft-color;
     background: url("../images/bg-desktop.png") $bg-color no-repeat;
     background-size: contain;
-    background-position: center 22.50rem;
+    background-position: center 21rem;
     width: 100%;
     margin: auto;
     padding: 1rem;
-}
-
-main{
-    @include flexBox(row, center ,center);
-    width: 100%;
-    max-width: 1000px;  
-    padding: 0.5rem;
     
-    section{
-        margin: 1rem;
-        padding: 1rem 1rem 0.5rem 2.5rem;
-        background: $card-color;
+    main{
+        @include flexBox(row, center ,center);
+        width: 100%;
+        max-width: 1000px;  
+        padding: 0.5rem;
+        
+        section{
+            margin: 1rem;
+            padding: 1rem 1rem 0.5rem 2.5rem;
+            background: $card-color;
+        }
     }
 }
 
 // #Item-1 Card Design SCSS/CSS Nesting & Variables Code
 #item-1{
     width: 35%;
-    border-top-right-radius: 100px;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    @include border(100px);
 
     .hidden-logo{
         align-self: flex-start;
         padding: 0.5rem;
         margin-top: 1rem;
         margin-left: -0.5rem;
-        border-top-right-radius: 100px;
+        @include border(100px);
     }
 
     .file-container{
@@ -145,6 +54,7 @@ main{
             background: $bg-color;
             padding: 0.8rem;
             border-radius: 10px;
+            cursor: pointer;
 
             img{
                 width: 100%;
@@ -161,11 +71,11 @@ main{
     padding: 2.5rem;
 
     .dataleft{
-        @include flexBox(row ,center ,center );
+        @include flexBox(row ,center ,center);
         width: 11rem;
         height: 4rem;
-        position: relative;
         float: right;
+        position: relative;
         margin-top: -5rem;
         padding: 1.9rem 0.5 1.9rem 0.5rem;
         border: 1px solid black;
@@ -192,6 +102,7 @@ main{
     .description{
         color: $ft-color;
         font-size: 15px;
+        opacity: 0.8;
     }
     
     .sliderContainer{
@@ -231,21 +142,39 @@ main{
     }
 }
 
-@media all and (max-width: 971px) {
-    body{
-        margin-top: -1rem;
-        transition: 0.3s;
-        background-repeat: repeat-y;
-        background-size: cover;
-    }
-    main{
-        @include flexBox(column, center, center );
-        transition: 0.3s;
+// Footer Design Code
+footer{
+    font-size: 0.8rem;
+    font-weight: 600;
+    word-spacing: 0.5rem;
+    margin-top: 2rem;
 
-        section{
-            width: 100%;
+    a{
+        color: orange;
+        cursor: pointer;
+
+        &:hover{
+            text-decoration: none;
+            color: peachpuff;
         }
     }
+}
+
+@media all and (max-width: 971px) {
+    body{
+        margin-top: -2.5rem;
+        background-size: cover;
+        
+        main{
+            @include flexBox(column, center, center );
+            transition: 0.3s;
+            
+            section{
+                width: 100%;
+            }
+        }
+    }
+
     #item-1, #item-2{
         width: 100%;
         align-self: center;
@@ -260,8 +189,50 @@ main{
     }
 
     .dataleft{
-        position:static;
-        clear: right;
+        transition: 0.3s;
+        bottom: -10.80rem;
+    }
+    
+    footer{
+        margin-top: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    #item-1{
+        align-items: flex-start;
+        transition: 0.4s;
+
+        .hidden-logo{
+            align-self: flex-start;
+            transition: 0.4s;
+        }
+    }
+
+    footer{
+        text-align: center;
+        line-height: 1.8;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        background: url("../images/bg-mobile.png") no-repeat;
+        background-size: cover;
+    }
+    #item-2{
+        margin-top: -0.1rem;
+
+        .description{
+            transition: 0.3s;
+            text-align: center;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .dataleft{
+        transition: 0.3s;
+        left: -2.1rem;
     }
 }
 
