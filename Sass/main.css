@@ -94,8 +94,8 @@ body {
   font-family: "Raleway", sans-serif;
   color: #dddbff;
   background: url("../images/bg-desktop.png") #0c122c no-repeat;
-  background-size: contain;
-  background-position: center 21rem;
+  background-size: 100% 62%;
+  background-position: center 330px;
   width: 100%;
   margin: auto;
   padding: 1rem;
@@ -189,6 +189,7 @@ body main section {
 
 #item-1 .file-container a img {
   width: 100%;
+  height: auto;
 }
 
 #item-2 {
@@ -224,7 +225,7 @@ body main section {
   border-radius: 10px;
 }
 
-#item-2 .dataleft .span1 {
+#item-2 .dataleft h2 {
   font-size: 2.5rem;
   color: black;
   font-weight: 600;
@@ -233,14 +234,14 @@ body main section {
       align-self: center;
 }
 
-#item-2 .dataleft .span2 {
+#item-2 .dataleft h6 {
   color: #848794;
   font-weight: 600;
   font-size: 0.8rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-top: 0.3rem;
+  margin-top: 2.1rem;
   margin-left: 0.3rem;
 }
 
@@ -302,7 +303,7 @@ body main section {
 footer {
   font-size: 0.8rem;
   font-weight: 600;
-  word-spacing: 0.5rem;
+  word-spacing: 0.1rem;
   margin-top: 2rem;
 }
 
@@ -319,7 +320,6 @@ footer a:hover {
 @media all and (max-width: 971px) {
   body {
     margin-top: -2.5rem;
-    background-size: cover;
   }
   body main {
     display: -webkit-box;
@@ -394,13 +394,15 @@ footer a:hover {
   footer {
     text-align: center;
     line-height: 1.8;
+    font-size: 0.65rem;
   }
 }
 
 @media screen and (max-width: 400px) {
   body {
+    margin-top: -4rem;
     background: url("../images/bg-mobile.png") no-repeat;
-    background-size: cover;
+    background-size: 100% 150%;
   }
   #item-2 {
     margin-top: -0.1rem;
